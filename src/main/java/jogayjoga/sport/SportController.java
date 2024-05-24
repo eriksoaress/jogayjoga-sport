@@ -1,5 +1,7 @@
 package jogayjoga.sport;
 
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +28,9 @@ public interface SportController {
     ResponseEntity<SportOut> get(
         @PathVariable(required = true) String id
     );
+
+    @GetMapping("/sport")
+    public ResponseEntity<List<SportOut>> readall();
         
     // @PutMapping("/sport/{id}")
     // ResponseEntity<sportOut> update (
