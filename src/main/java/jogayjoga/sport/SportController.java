@@ -32,7 +32,7 @@ public interface SportController {
     @PutMapping("/sport/{id}")
     ResponseEntity<SportOut> update (
         @PathVariable(required = true) String id,
-        @RequestBody(required = true) SportUpdateIn in
+        @RequestBody(required = true) SportIn in
     );
 
     @DeleteMapping("/sport/{id}")
